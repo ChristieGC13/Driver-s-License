@@ -28,9 +28,9 @@
 	      		<p>
 	      			<form:label path="person" class="form-label">Person:</form:label>
 		      		<form:errors path="person" class="text-danger" />
-		      		<form:select path="person" items="${allPersons}" class="form-control">
+		      		<form:select path="person" class="form-control">
 		      			<c:forEach items="${allPersons}" var="person"> 
-			      			<form:option value="${person.firstName} ${person.lastName}"/>
+			      			<form:option value="${person.id}"/> <c:out value="${person.firstName}"/> <c:out value="${person.lastName}"/> />
 		      			</c:forEach>
 		      		</form:select>
 	      		</p>
